@@ -19,3 +19,145 @@ body {
     width: min(100% - 30px, 1080px);
     margin-inline: auto;
 }
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+h1, h2, h3, h4 {
+    text-wrap: balance;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* --------------------Header + first section style----------------------- */
+/* ----------------------------------------------------------------------- */
+
+.hero-banner {
+    /* height: 525px;   */
+    background: url(../img/bg-image.jpg) no-repeat center center ;
+    background-size: cover;
+}
+
+/* header style */
+
+header {
+    height: 100%;
+}
+
+.header-content {
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.links-1 {
+    width: 45%;
+    display: flex;
+    justify-content: end;
+}
+
+.links-2 {
+    width: 15%;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.header-content h1 {
+    width: 40%;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.header-content li {
+    margin-left: 50px;
+}
+
+.header-content a:not(.login) {
+    color: #fafafa;
+    transition: all 0.25s ease-in-out;
+}
+
+.links-1 a, .links-2 a {
+    font-weight: 550;
+}
+
+.login {
+    position: relative;
+    color: #fafafa;
+    background-color: #000;
+    border: 2px solid #fafafa;
+    padding: 10px 30px;
+    border-radius: 50px;
+    transition: all 0.25s ease-in-out;
+    display: inline-block;
+}
+
+.login::after {
+    position: absolute;
+    content: url(../img/menu.png);
+    visibility: hidden;
+    left: 0px;
+    top: 20px;
+}
+
+.links-1 a:hover, .links-2 li:not(.login):hover {
+    color: #2997ff;
+}
+
+.login:hover {
+    background-color: #fafafa;
+    color: #000;
+}
+
+/* first section style */
+
+.first-section {
+    height: 100%;
+    color: #fafafa;
+    text-align: center;
+    padding-top: 170px;
+    padding-bottom: 170px;
+}
+
+.first-section-content {
+    width: 100%;   
+}
+
+.first-section-content h1 {
+    font-size: 70px;
+    font-weight: 600;
+}
+
+.first-section-content em {
+    font-style: italic;
+}
+
+.first-section-content p {
+    padding-top: 10px;
+    font-size: 24px;
+}
+
+.first-section button {
+    font-size: 18px;
+    margin-top: 20px;
+    padding: 15px 70px;
+    color: #fafafa;
+    background-color: #000;
+    border: 2px solid #fafafa;
+}
