@@ -41,7 +41,7 @@ img, picture, video, canvas, svg {
 /* ----------------------------------------------------------------------- */
 
 .hero-banner {
-    height: 525px;  
+    /* height: 525px;   */
     background: url(../img/bg-image.jpg) no-repeat center center ;
     background-size: cover;
 }
@@ -49,11 +49,14 @@ img, picture, video, canvas, svg {
 /* header style */
 
 header {
-    height: 80px;
+    height: 100%;
 }
 
 .header-content {
-    height: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -61,9 +64,13 @@ header {
 }
 
 .links-1 {
-    width: 60%;
+    width: 45%;
     display: flex;
     justify-content: end;
+}
+
+.links-2 {
+    width: 15%;
 }
 
 .flex {
@@ -72,6 +79,7 @@ header {
 }
 
 .header-content h1 {
+    width: 40%;
     font-size: 28px;
     font-weight: 600;
 }
@@ -80,7 +88,7 @@ header {
     margin-left: 50px;
 }
 
-.header-content a:not(.book-now) {
+.header-content a:not(.login) {
     color: #fafafa;
     transition: all 0.25s ease-in-out;
 }
@@ -89,17 +97,18 @@ header {
     font-weight: 550;
 }
 
-.explore {
+.login {
     position: relative;
-    color: #fff;
-    background-color: #453aee;
-    padding: 10px 20px;
-    border-radius: 5px;
+    color: #fafafa;
+    background-color: #000;
+    border: 2px solid #fafafa;
+    padding: 10px 30px;
+    border-radius: 50px;
     transition: all 0.25s ease-in-out;
     display: inline-block;
 }
 
-.explore::after {
+.login::after {
     position: absolute;
     content: url(../img/menu.png);
     visibility: hidden;
@@ -107,27 +116,31 @@ header {
     top: 20px;
 }
 
-.links-1 a:hover, .links-2 a:not(.explore):hover {
-    color: #453aee;
+.links-1 a:hover, .links-2 li:not(.login):hover {
+    color: #2997ff;
 }
 
-.explore:hover {
-    background-color: #3a5cee;
+.login:hover {
+    background-color: #fafafa;
+    color: #000;
 }
 
 /* first section style */
 
 .first-section {
-    padding: 60px 0px 90px 0px;
-    color: #202124;
+    height: 100%;
+    color: #fafafa;
+    text-align: center;
+    padding-top: 170px;
+    padding-bottom: 170px;
 }
 
 .first-section-content {
-    width: 35%;   
+    width: 100%;   
 }
 
 .first-section-content h1 {
-    font-size: 50px;
+    font-size: 70px;
     font-weight: 600;
 }
 
@@ -137,5 +150,14 @@ header {
 
 .first-section-content p {
     padding-top: 10px;
+    font-size: 24px;
+}
+
+.first-section button {
     font-size: 18px;
+    margin-top: 20px;
+    padding: 15px 70px;
+    color: #fafafa;
+    background-color: #000;
+    border: 2px solid #fafafa;
 }
