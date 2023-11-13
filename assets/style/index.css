@@ -20,6 +20,56 @@ body {
     margin-inline: auto;
 }
 
+
+h1 {
+    text-align: center;
+}
+
+.prices {
+    display: flex;
+}
+
+.prices p {
+    color: red;
+}
+
+.prices s {
+    margin-right: 5px;
+    color: red;
+}
+
+.box a {
+    cursor: pointer;
+}
+
+.box {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap:wrap;
+}
+
+.two {
+    display: none;
+}
+
+.show {
+    text-align: center;
+}
+
+.pro {
+    text-align: center;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: rgba(0 0 0 / 0.3) 0 0 15px;
+    margin-top: 10px;
+}
+
+.pro h3 {
+    text-align: center;
+}
 a {
     text-decoration: none;
 }
