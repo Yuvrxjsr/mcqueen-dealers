@@ -15,80 +15,17 @@ body {
     font-family: 'Nunito Sans', sans-serif;
 }
 
+h1, h2, h3, h4 {
+    text-wrap: balance;
+}
+
 .container {
     width: min(100% - 30px, 1080px);
     margin-inline: auto;
 }
 
-
-h1 {
-    text-align: center;
-}
-
-.prices {
-    display: flex;
-}
-
-.prices p {
-    color: red;
-}
-
-.prices s {
-    margin-right: 5px;
-    color: red;
-}
-
-.box a {
-    cursor: pointer;
-}
-
-.box {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap:wrap;
-}
-
-.two {
-    display: none;
-}
-
-.show {
-    text-align: center;
-}
-
-.pro {
-    text-align: center;
-    padding: 10px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: rgba(0 0 0 / 0.3) 0 0 15px;
-    margin-top: 10px;
-}
-
-.pro h3 {
-    text-align: center;
-}
-a {
-    text-decoration: none;
-}
-
-li {
-    list-style: none;
-}
-
-h1, h2, h3, h4 {
-    text-wrap: balance;
-}
-
-img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-}
-
-/* --------------------Header + first section style----------------------- */
-/* ----------------------------------------------------------------------- */
+/* --------------------Header + hero banner style----------------------- */
+/* --------------------------------------------------------------------- */
 
 .hero-banner {
     /* height: 525px;   */
@@ -103,9 +40,6 @@ header {
 }
 
 .header-content {
-    position: sticky;
-    top: 0;
-    z-index: 99;
     height: 80px;
     display: flex;
     justify-content: space-between;
@@ -175,8 +109,6 @@ header {
     color: #000;
 }
 
-/* first section style */
-
 .first-section {
     height: 100%;
     color: #fafafa;
@@ -210,4 +142,81 @@ header {
     color: #fafafa;
     background-color: #000;
     border: 2px solid #fafafa;
+    transition: all 0.3s ease-in-out;
+}
+
+.first-section button:hover {
+    color: #000;
+    background-color: #fafafa;
+    cursor: pointer;
+}
+
+/* --------------------Second Section style----------------------- */
+/* -------------------------------------------------------------- */
+
+.second-section {
+    margin-top: 30px;
+}
+
+.second-section h1 {
+    text-align: center;
+    font-size: 50px;
+}
+
+.prices {
+    display: flex;
+}
+
+.prices p {
+    color: red;
+}
+
+.prices s {
+    margin-right: 5px;
+    color: red;
+}
+
+.box a {
+    cursor: pointer;
+}
+
+.box {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}
+
+.two {
+    display: none;
+}
+
+.show {
+    text-align: center;
+}
+
+.pro {
+    text-align: center;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: rgba(0 0 0 / 0.3) 0 0 15px;
+    margin-top: 10px;
+}
+
+.pro h3 {
+    text-align: center;
+}
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
 }
