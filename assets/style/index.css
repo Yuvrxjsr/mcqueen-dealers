@@ -28,12 +28,9 @@ h1, h2, h3, h4 {
 /* --------------------------------------------------------------------- */
 
 .hero-banner {
-    /* height: 525px;   */
     background: url(../img/bg-image.jpg) no-repeat center center ;
     background-size: cover;
 }
-
-/* header style */
 
 header {
     height: 100%;
@@ -270,6 +267,9 @@ img, picture, video, canvas, svg {
     background-color: #fafafa;
     color: #000;
 }
+
+/* --------------------Sign Up style------------------------ */
+/* --------------------------------------------------------- */
 
 .sign-up {
     background-color: #000;
