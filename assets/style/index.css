@@ -9,6 +9,7 @@
     border-style: none;
     vertical-align: baseline;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 body {
@@ -41,7 +42,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 .links-1 {
@@ -160,29 +160,45 @@ header {
     font-size: 50px;
 }
 
-.prices {
-    display: flex;
-}
-
-.prices p {
-    color: red;
-}
-
-.prices s {
-    margin-right: 5px;
-    color: red;
-}
-
 .box a {
     cursor: pointer;
+    text-decoration: none;
 }
 
+.intro {
+    padding: 20px 0;
+    font-size: 20px;
+    text-align: center;
+}
 .box {
+    margin: 20px 0;
     margin-top: 20px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap:wrap;
+}
+
+.car-item {    
+    width: calc(33.33% - 20px); 
+    padding: 10px;
+    margin-bottom: 20px; 
+    box-shadow: none;
+    box-sizing: border-box; 
+}
+
+.car-item img {
+    border-radius: 10px;
+}
+
+.mechs {
+    margin-top: 10px;
+    color: #a1a1a1;
+    text-align: left;
+}
+
+span {
+    color: #000;
 }
 
 .two {
@@ -197,24 +213,29 @@ header {
     text-align: center;
     padding: 10px;
     background-color: #fff;
-    border-radius: 10px;
-    box-shadow: rgba(0 0 0 / 0.3) 0 0 15px;
+    box-shadow: rgba(0 0 0 / 0.1) 0 0 15px;
     margin-top: 10px;
+    border: 1px solid #fff;
+    transition: all 0.3s ease-out;
+}
+
+.pro:hover {
+    border: 1px solid #c1c1c1;
 }
 
 .pro h3 {
     text-align: center;
-}
-a {
-    text-decoration: none;
+    font-weight: 700;
+    font-size: 24px;
 }
 
 li {
     list-style: none;
 }
 
-img, picture, video, canvas, svg {
+.box img {
     display: block;
+    max-width: 100%;
 }
 
 /* --------------------Today's Pick style------------------------ */
