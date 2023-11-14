@@ -151,7 +151,7 @@ header {
     cursor: pointer;
 }
 
-/* --------------------Second Section style----------------------- */
+/* --------------------Second Section style---------------------- */
 /* -------------------------------------------------------------- */
 
 .second-section {
@@ -219,4 +219,88 @@ li {
 img, picture, video, canvas, svg {
     display: block;
     max-width: 100%;
+}
+
+/* --------------------Today's Pick style------------------------ */
+/* -------------------------------------------------------------- */
+
+.deal {
+    margin-top: 80px;
+}
+
+.deal h2 {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.deal-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.deal-flex h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.deal-flex p, .deal-flex li {
+    font-size: 18px;
+}
+
+.deal-flex ul {
+    margin-top: 10px;
+    list-style: none;
+    font-style: italic;
+}
+
+.deal button {
+    font-size: 18px;
+    padding: 15px 30px;
+    border: 1px solid #000;
+    border-radius: 3px;
+    background-color: #000;
+    color: #fff;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.deal button:hover {
+    background-color: #fafafa;
+    color: #000;
+}
+
+.sign-up {
+    background-color: #000;
+    margin-top: 80px;
+    display: grid;
+    place-items: center;
+    padding: 80px 0px 80px 0px;
+}
+
+.sign-up h2, .sign-up p {
+    color: #fff;
+}
+
+.sign-up h2 {
+    font-size: 40px
+}
+.sign-up p {
+    padding: 10px 0px 30px 0px;
+    font-size: 18px;
+}
+
+.sign-up button {
+    padding: 15px 30px;
+    font-size: 18px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.sign-up button:hover {
+    background-color: #000;
+    color: #fafafa;
 }
