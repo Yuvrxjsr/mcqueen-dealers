@@ -215,20 +215,22 @@ li {
 
 img, picture, video, canvas, svg {
     display: block;
-    max-width: 100%;
 }
 
 /* --------------------Today's Pick style------------------------ */
 /* -------------------------------------------------------------- */
 
 .deal {
-    margin-top: 80px;
+    margin-top: 60px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #f8f9f9;
 }
 
 .deal h2 {
     font-size: 50px;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 .deal-flex {
     display: flex;
@@ -273,10 +275,9 @@ img, picture, video, canvas, svg {
 
 .sign-up {
     background-color: #000;
-    margin-top: 80px;
     display: grid;
     place-items: center;
-    padding: 80px 0px 80px 0px;
+    padding: 60px 0px 60px 0px;
 }
 
 .sign-up h2, .sign-up p {
@@ -303,4 +304,53 @@ img, picture, video, canvas, svg {
 .sign-up button:hover {
     background-color: #000;
     color: #fafafa;
+}
+
+/* --------------------Footer style------------------------ */
+/* -------------------------------------------------------- */
+
+footer {
+    background-color: #fff;
+}
+
+footer p {
+    text-align: center;
+    color: #737373;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+footer a {
+    color: #737373;
+    transition: all 0.3s ease-out;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #1d1e22;
+}
+
+footer i {
+    font-size: 25px;
+}
+
+.footer-row-1 ul {
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 30px;
+    gap: 30px;
+}
+
+.footer-row-2 {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-row-2 li {
+    display: inline;
+}
+
+.footer-row-2 li + li {
+    margin-left: 40px;
 }
