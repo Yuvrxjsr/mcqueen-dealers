@@ -63,3 +63,55 @@ onEvent('load', window, () => {
     email.value = '';
     password.value = '';
 });
+
+//Javascript for product page
+
+const productsToSlide = document.querySelectorAll(".v-products-container .v-each-product");
+const slideTogglers = document.querySelectorAll(".v-toggle-slide-container .v-slide-btn");
+
+
+
+function handleEachToggler(event) {
+	event.stopPropagation();
+	const target = this.getAttribute("data-v-target");
+	if (target) {
+		allModals.forEach((modal) => {
+			const attr = modal.getAttribute("data-v-id");
+			if (target === attr && !modal.classList.contains("active")) {
+				addActiveElement(modal);
+			} else {
+				removeActiveElement(modal);
+			}
+		});
+	}
+}
+
+
+function slideInOut(currentSlide) {
+	productsToSlide.forEach((slide, slideIndex) => {
+		if (slideIndex === currentSlide) {
+			slide.classList.add("active");
+		} else {
+			slide.classList.remove("active");
+		}
+	});
+}
+
+if (slideTogglers) {
+	let currentSlide = 0;
+	slideTogglers.forEach((slidetoggle) => {
+		const where = slidetoggle.getAttribute("data-where");
+		if (where === "v-next") {
+			slidetoggle.addEventListener("click", function () {
+				currentSlide = currentSlide < productsToSlide.length - 1 ? currentSlide + 1 : 0;
+				slideInOut(currentSlide);
+			});
+		}
+		if (where === "v-prev") {
+			slidetoggle.addEventListener("click", function () {
+				currentSlide = currentSlide > 0 ? currentSlide - 1 : productsToSlide.length - 1;
+				slideInOut(currentSlide);
+			});
+		}
+	});
+}
