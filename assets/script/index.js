@@ -1,38 +1,23 @@
 'use strict';
 
-function onEvent(event, selector, callback) {
-    return selector.addEventListener(event, callback);
-}
+const dialog = document.querySelector('.dialog');
+const login = document.querySelector('.login');
+const submit = document.querySelector('.submit');
+const modalBg = document.querySelector('.modal-bg');
+const input = document.querySelector('.dialog form input')
 
-function selectById(selector, parent = document) {
-    return parent.getElementById(selector);
-}
+login.addEventListener('click', function() {
+    dialog.classList.remove('is-hidden');
+    dialog.classList.add('is-visible');
+    modalBg.classList.add('modal-bg-dark');
+});
 
-function select(selector, parent = document) {
-    return parent.querySelector(selector);
-}
-
-function selectAll(selector, parent = document) {
-    return[...parent.querySelectorAll(selector)];
-}
-
-function create(element, parent = document) {
-    return parent.createElement(element);
-}
-
-function print(...args) {
-    console.log(args.join(', '));
-}
-
-const show = select('.showBtn');
-const box = select('.two');
-const show1 = selectById('showIcon');
-
-onEvent('click', show, () => {
-    if (box.style.display = 'none') {
-        box.style.display = 'flex';
-    } else {
-        show1.classList.remove('fa-solid fa-arrow-down');
-        show1.classList.add('fa-solid fa-arrow-up');
+window.addEventListener('click', (event) => {
+    if (event.target == modalBg || event.target == submit) {
+        if (input.value !== "") {
+            dialog.classList.remove('is-visible');
+            dialog.classList.add('is-hidden');
+            modalBg.classList.remove('modal-bg-dark');
+        }
     }
 });
