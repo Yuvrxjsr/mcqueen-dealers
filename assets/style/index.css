@@ -264,7 +264,7 @@ header {
 }
 
 .car-item {    
-    width: calc(33.33% - 20px); 
+    width: calc(100% / 3);
     padding: 10px;
     margin-bottom: 20px; 
     box-shadow: none;
@@ -458,4 +458,44 @@ footer i {
 
 .footer-row-2 li + li {
     margin-left: 40px;
+}
+
+/* --------------------Media Querry------------------------ */
+/* -------------------------------------------------------- */
+
+@media screen and (max-width: 1054px) {
+    .second-section h1 {
+        font-size: 45px;
+    }
+    .second-section p {
+        font-size: 20px;
+    }
+    .car-item {
+        width: 50%;
+    }
+    .pro {
+        display: grid;
+        width: 100%;
+        place-items: center;
+    }
+}
+
+@media screen and (max-width: 712px) {
+    .second-section h1 {
+        font-size: 37px;
+    }
+    .second-section p {
+        font-size: 17px;
+    }
+    .car-item {
+        width: 100%;
+    }
+    .pro {
+        display: grid;
+        width: 100%;
+        place-items: center;
+    }
+    .pro img {
+        width: auto;
+    }
 }
