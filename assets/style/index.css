@@ -37,6 +37,10 @@ header {
     height: 100%;
 }
 
+.header-bg {
+    background-color: #000;
+}
+
 .header-content {
     height: 80px;
     display: flex;
@@ -627,4 +631,185 @@ footer i {
     .deal p, .deal ul li {
         font-size: 17px;
     }
+}
+
+/* --------------------Product page style------------------------ */
+/* --------------------------------------------------------- */
+:root {
+	--font-family: Font, "Helvetica", "Arial", "system-ui";
+	--white: #fff;
+	--dark-variant: 0, 0, 0;
+	--dark: rgba(var(--dark-variant), 1);
+	--border-line-clr: #f2f3f5;
+	--primary-clr: #ffe346;
+	--primary-clr-light: #ffe346;
+	--primary-clr-variant: 120, 82, 254;
+	--secondary-clr: #190482;
+}
+
+h6 {
+    color: #000;
+    background-color: #fff;
+}
+
+/*body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	min-height: 100dvh;
+}*/
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+th, td {
+	border: 1px solid #ddd;
+	padding: 10px;
+	text-align: left;
+}
+
+th {
+	background-color:#ffe346;
+	color: #fff;
+    font-size: large;
+}
+
+.v-product-grid-container {
+	display: grid;
+	grid-template-columns: 1fr;
+	/*padding: 1rem;*/
+	row-gap: 2rem;
+}
+.v-product-grid-container .v-products-container {
+	display: flex;
+	flex-wrap: nowrap;
+	background-color: var(--primary-clr-light);
+	/* border-radius: 1rem; */
+	overflow: hidden;
+	height: 100%;
+}
+.v-product-grid-container .v-products-container .v-each-product:not(.active) {
+	flex-grow: 0;
+	display: none;
+}
+.v-product-grid-container .v-each-product {
+	pointer-events: none;
+	user-select: none;
+	height: 100%;
+	height: 350px;
+	overflow: hidden;
+}
+.v-product-grid-container .v-each-product .v-product-image-container {
+	height: 100%;
+	overflow: hidden;
+	width: 100%;
+}
+
+.v-product-image-container img {
+    height:inherit;
+}
+
+.v-product-grid-container .v-each-product .img-fluid {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.v-product-grid-container .v-products-container .v-each-product.active {
+	flex-grow: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	animation: fadeInOut 400ms ease-in-out;
+}
+@keyframes fadeInOut {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+.v-product-grid-container .v-product-content {
+	display: flex;
+    justify-content: center;
+}
+.v-product-grid-container .v-product-content .v-product-content-inner {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	padding: 1.5rem;
+	row-gap: 2rem;
+}
+.v-product-grid-container .v-product-content .v-product-title {
+	font-size: 2rem;
+}
+.v-product-grid-container .v-product-content .v-purchase {
+	background-color: #000;
+	display: flex;
+	align-items: center;
+	gap: 0.6rem;
+	padding: 0.8rem 3rem;
+	border-radius: 4px;
+	font-size: 1rem;
+	color: var(--white);
+	font-weight: 500;
+}
+.v-product-grid-container .v-product-content .v-purchase svg {
+	--size: 1.6rem;
+}
+.v-parent-23902 {
+	display: flex;
+	flex-direction: column-reverse;
+}
+.v-toggle-slide-container {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	justify-content: center;
+}
+.v-toggle-slide-container .v-slide-btn {
+	color: var(--white);
+	background-color: var(--dark);
+	border-radius: 50%;
+	padding: 7px;
+	border: 1px solid rgba(var(--primary-clr-variant), 0.2);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition-property: background-color, color;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+.v-toggle-slide-container .v-slide-btn svg {
+	--size: 1.7rem;
+	aspect-ratio: 1/1;
+}
+.v-toggle-slide-container .v-slide-btn:hover {
+	background-color: var(--primary-clr);
+	color: var(--white);
+}
+
+ .v-content .v-text { 
+    color: #000;
+}
+
+.v-text {
+    color: #fff;
+}
+
+.v-btn-container button:hover {
+    color: var(--white);
+    background-color: var(--primary-clr) !important;
+    cursor: pointer;
+}
+
+.v-btn-container button {
+    transition: all 0.3s ease-in-out; 
 }
