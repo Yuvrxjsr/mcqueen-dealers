@@ -71,7 +71,7 @@ header {
 
 .header-content a:not(.login) {
     color: #fafafa;
-    transition: all 0.25s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .links-1 a, .links-2 a {
@@ -85,7 +85,7 @@ header {
     border: 2px solid #fafafa;
     padding: 10px 30px;
     border-radius: 50px;
-    transition: all 0.25s ease-in-out;
+    transition: all 0.3s ease-in-out;
     display: inline-block;
 }
 
@@ -98,7 +98,7 @@ header {
 }
 
 .links-1 a:hover, .links-2 li:not(.login):hover {
-    color: #2997ff;
+    color: #b7b6b6;
 }
 
 .login:hover {
@@ -148,11 +148,95 @@ header {
     cursor: pointer;
 }
 
+/* --------------------Dialog box style---------------------- */
+/* ---------------------------------------------------------- */
+
+.dialog {
+    background-color: #fff;
+    display: grid;
+    place-items: center;
+    max-width: 30%;
+    border-radius: 3px;
+    padding: 40px 40px 50px 40px;
+}
+
+.dialog h2 {
+    text-align: center;
+}
+
+.dialog input {
+    background-color:#eaeff2;
+    padding: 15px 25px;
+    display: block;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 17px;
+}
+
+.dialog input[type="button"] {
+    background-color: #000;
+    width: 100%; 
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 17px;
+    margin-top: 10px;
+    transition: all 0.3s ease-out;
+}
+
+.dialog input[type="button"]:hover {
+    background-color: #232932;
+}
+
+.dialog a {
+    text-decoration: none;
+    color: #706f6f;
+    font-size: 14px;
+    transition: all 0.3s ease-out;
+}
+
+.dialog a:hover {
+    color: #000;
+}
+
+.email {
+    margin-bottom: 10px;
+}
+
+.pass {
+    margin-bottom: 5px;
+}
+
+.is-hidden {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+}
+
+.modal-bg-dark {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0 0 0 / 0.5);
+}
+
+.is-visible {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    inset: 22%;
+    opacity: 1;
+}
+
 /* --------------------Second Section style---------------------- */
 /* -------------------------------------------------------------- */
 
 .second-section {
-    margin-top: 30px;
+    margin-top: 60px;
 }
 
 .second-section h1 {
@@ -243,7 +327,7 @@ li {
 
 .deal {
     margin-top: 60px;
-    padding-top: 60px;
+    padding-top: 30px;
     padding-bottom: 60px;
     background-color: #f8f9f9;
 }
@@ -358,7 +442,7 @@ footer i {
 .footer-row-1 ul {
     display: flex;
     justify-content: center;
-    padding-top: 80px;
+    padding-top: 60px;
     padding-bottom: 30px;
     gap: 30px;
 }
