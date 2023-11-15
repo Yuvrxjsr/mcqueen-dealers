@@ -271,7 +271,8 @@ header {
     padding: 10px;
     margin-bottom: 20px; 
     box-shadow: none;
-    box-sizing: border-box; 
+    box-sizing: border-box;
+    color: #000;
 }
 
 .car-item img {
@@ -652,13 +653,6 @@ h6 {
     background-color: #fff;
 }
 
-/*body {
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
-	min-height: 100dvh;
-}*/
-
 table {
 	width: 100%;
 	border-collapse: collapse;
@@ -673,7 +667,7 @@ th, td {
 }
 
 th {
-	background-color:#ffe346;
+	background-color:#c79124;
 	color: #fff;
     font-size: large;
 }
@@ -792,11 +786,11 @@ th {
 	aspect-ratio: 1/1;
 }
 .v-toggle-slide-container .v-slide-btn:hover {
-	background-color: var(--primary-clr);
+	background-color: #c79124;
 	color: var(--white);
 }
 
- .v-content .v-text { 
+.v-content .v-text { 
     color: #000;
 }
 
@@ -806,7 +800,7 @@ th {
 
 .v-btn-container button:hover {
     color: var(--white);
-    background-color: var(--primary-clr) !important;
+    background-color: #c79124 !important;
     cursor: pointer;
 }
 
