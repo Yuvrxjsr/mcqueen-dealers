@@ -56,7 +56,7 @@ header {
 
 .flex {
     display: flex;
-    align-items: center;
+    justify-content: end;
 }
 
 .header-content h1 {
@@ -66,7 +66,7 @@ header {
 }
 
 .header-content li {
-    margin-left: 50px;
+    margin-left: 20px;
 }
 
 .header-content a:not(.login) {
@@ -252,7 +252,6 @@ header {
 .intro {
     padding: 20px 0;
     font-size: 20px;
-    text-align: center;
 }
 .box {
     margin: 20px 0;
@@ -463,6 +462,95 @@ footer i {
 /* --------------------Media Querry------------------------ */
 /* -------------------------------------------------------- */
 
+/* Header + Hero banner */
+@media screen and (max-width: 1190px) {
+    .first-section-content h1 {
+    font-size: 60px;
+    }
+}
+
+@media screen and (max-width: 1089px) {
+    .login {
+        position: right;
+        background-color: transparent;
+        font-size: 14px;
+    }
+    .first-section-content h1 {
+        font-size: 54px;
+    }
+    .first-section-content p {
+        font-size: 16px
+    }
+}
+
+@media screen and (max-width: 868px) {
+    .header-content li {
+        visibility: hidden;
+    }
+    .login::after {
+        visibility: visible;
+        transition-delay: 0.2s;
+        left: 60px;
+        top: 20px;
+    }
+}
+
+@media screen and (max-width: 824px) {
+    .first-section-content h1 {
+        font-size: 45px;
+        padding-bottom: 5px;
+    }
+}
+
+@media only screen and (max-width: 684px) {
+    .first-section-content button {
+        font-size: 17px;
+        padding: 7px 18px;
+        margin-top: 7px;
+    }
+}
+
+@media only screen and (max-width: 664px) {
+    .first-section-content h1 {
+        font-size: 42px;
+    }
+}
+
+@media only screen and (max-width: 620px) {
+    .first-section-content button {
+        font-size: 16px;
+        padding: 9px 18px;
+        margin-top: 8px;
+    }
+}
+
+@media only screen and (max-width: 580px) {
+    .first-section-content button {
+        font-size: 15px;
+        padding: 7px 13px;
+        margin-top: 7px;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .hero-banner {
+        height: 525px;  
+        background-size: cover;
+    }
+    .first-section-content h1 {
+        font-size: 38px;
+    }
+    .first-section-content p {
+        font-size: 16px;
+    }
+    .first-section-content button {
+        font-size: 14px;
+        padding: 5px 10px;
+        margin-top: 5px;
+    }
+}
+
+/* Cars display */
 @media screen and (max-width: 1054px) {
     .second-section h1 {
         font-size: 45px;
