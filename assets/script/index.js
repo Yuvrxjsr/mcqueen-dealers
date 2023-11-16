@@ -1,75 +1,78 @@
 'use strict';
 
 function onEvent(event, selector, callback) {
-    return selector.addEventListener(event, callback);
+	return selector.addEventListener(event, callback);
 }
 
 function selectById(selector, parent = document) {
-    return parent.getElementById(selector);
+	return parent.getElementById(selector);
 }
 
 function select(selector, parent = document) {
-    return parent.querySelector(selector);
+	return parent.querySelector(selector);
 }
 
 function selectAll(selector, parent = document) {
-    return[...parent.querySelectorAll(selector)];
+	return [...parent.querySelectorAll(selector)];
 }
 
 function create(element, parent = document) {
-    return parent.createElement(element);
+	return parent.createElement(element);
 }
 
 function print(...args) {
-    console.log(args.join(', '));
+	console.log(args.join(', '));
 }
 
-const dialog = select('.dialog');
-const login = select('.login');
-const submit = select('.submit');
-const modalBg = select('.modal-bg');
-const email = select('.email');
-const password = select('.pass');
+const modalTriggers = document.querySelectorAll("[data-v-target]");
+const allModals = document.querySelectorAll("[data-v-id]");
+const backdrop = document.querySelector(".v-backdrop");
 
-onEvent('click', login, () => {
-    dialog.classList.remove('is-hidden');
-    dialog.classList.add('is-visible');
-    modalBg.classList.add('modal-bg-dark');
-});
-
-function removeDialog() {
-    dialog.classList.remove('is-visible');
-    dialog.classList.add('is-hidden');
-    modalBg.classList.remove('modal-bg-dark');
-    email.value = '';
-    password.value = '';
+function removeActiveElement(element) {
+	if (element) {
+		backdrop.classList.remove("show");
+		element.classList.remove("active");
+	}
+}
+function addActiveElement(element) {
+	if (element) {
+		backdrop.classList.add("show");
+		element.classList.add("active");
+	}
 }
 
-onEvent('click', window, (event) => {
-    if (event.target == modalBg) {
-        removeDialog();
-    }
+function handleClickOutside() {
+	document.addEventListener("click", function (event) {
+		event.stopPropagation();
+		allModals.forEach((modal) => {
+			if (!modal.contains(event.target) && modal.classList.contains("active")) {
+				removeActiveElement(modal);
+			}
+		});
+	});
+}
+
+allModals.forEach((modal, _, arrayOfModals) => {
+	const closeModalButton = modal.querySelector(".v-close-modal");
+	closeModalButton.addEventListener("click", function () {
+		arrayOfModals.forEach((m) => {
+			removeActiveElement(m);
+		});
+	});
 });
 
-onEvent('click', window, (event) => {
-    if (event.target == submit) {
-        if (email.value !== '' && password.value !== '') {
-            removeDialog();
-        }
-    }
-})
+if (modalTriggers) {
+	modalTriggers.forEach((modalToggler) => {
+		modalToggler.addEventListener("click", handleEachToggler);
+	});
+}
 
-onEvent('load', window, () => {
-    email.value = '';
-    password.value = '';
-});
+handleClickOutside();
 
-//Javascript for product page
+//Javascript for product slide
 
 const productsToSlide = document.querySelectorAll(".v-products-container .v-each-product");
 const slideTogglers = document.querySelectorAll(".v-toggle-slide-container .v-slide-btn");
-
-
 
 function handleEachToggler(event) {
 	event.stopPropagation();
@@ -85,7 +88,6 @@ function handleEachToggler(event) {
 		});
 	}
 }
-
 
 function slideInOut(currentSlide) {
 	productsToSlide.forEach((slide, slideIndex) => {
